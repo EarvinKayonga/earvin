@@ -1,0 +1,106 @@
+body{
+background: url(fond.png);
+font-family: sans-serif;
+}
+p{ font-size: 13px; }
+h1, h2, h3, p, ul, li, a {
+margin: 0;
+padding: 0;
+text-decoration: none;
+}
+
+#conteneur{
+margin: 0 auto;
+width: 1000px;
+background: #fff;
+/*border: 1px solid;*/
+box-shadow: 1px 1px 6px;
+}
+
+#haut{
+height: 80px;
+/*background: blue; */
+}
+#haut .titre,#haut .information, #haut .panier{ float: left; }
+#haut .titre h1, #haut .titre img{
+float: left;
+}
+#haut .titre img{ margin: 6px 0 0 10px; }
+#haut .titre h1{ font-style: italic; margin: 0 0 0 20px; font-size: 43px; color: #000; }
+#haut .titre{ width: 350px; /*background: brown;*/ }
+#haut .titre p{  margin: 0 0 0 75px;  font-style: italic; color: #f583e3; }
+
+#haut .information{ width: 250px; /*background: purple; */ margin: 0 0 0 100px; }
+#haut .information .aide{ color: #3fc9fa; font-size: 26px; }
+#haut .information .tel{ width: 135px; background: url(aide.png) no-repeat; color: #3fc9fa; padding: 1px 0 0 45px; display: block; height: 23px; font-weight: bold; }
+#haut .information .horraire{ color: #b2b3b2; font-style: italic; }
+
+#haut .panier{ width: 250px; background: #3fc9fa;  margin: 0 0 0 50px; height: 70px;}
+#haut .panier h2{ border-bottom: 1px solid; font-size: 13px; padding: 2px 0; color: #fff; font-weight: normal; text-align: center; }
+#haut .panier img, #haut .panier p{ float: left; }
+#haut .panier p{ margin: 15px 0 0 10px; color: #fff; font-size: 15px; }
+
+#menu{
+background: #3fc9fa;
+height: 30px;
+}
+#menu a{
+float: left;
+width: 160px;
+height: 30px;
+text-align:center;
+line-height: 30px;
+font-size: 14px;
+display: block;
+color: #fff;
+}
+#menu a:hover{
+background: #f583e3;
+}
+#milieu{
+/*background: green;*/
+}
+#milieu .groupe-info{
+/*background: red;*/
+margin: 10px 0 0 0;
+}
+#milieu .groupe-info .paiement, #milieu .groupe-info .quisommesnous, #milieu .groupe-info .livraison{ float: left; margin: 0 0 0 15px; }
+#milieu .groupe-info h2{ color: #3fc9fa; font-size: 15px; margin: 0 0 10px 0; }
+#milieu .groupe-info .paiement{
+width: 199px;
+border-right: 1px solid #B2B3B2;
+}
+#milieu .groupe-info .quisommesnous{
+width: 555px;
+border-right: 1px solid #B2B3B2;
+}
+#milieu .groupe-info .livraison{
+width: 199px;
+}
+#milieu .groupe-info .livraison img, #milieu .groupe-info .livraison p { float: left; margin: 5px; }
+#milieu .groupe-info .livraison p{ margin: 15px 0 0 10px; }
+#milieu .groupe-info .livraison div { float: left; width: 100%; }
+.clear{ clear: both; }
+
+.publicite{ margin: 25px 0; }
+.bloc{ width: 300px; margin: 0 15px; border: 1px solid #B2B3B2; border-radius: 10px; box-shadow: 1px 1px 6px; float: left; }
+.bloc h2{ background: #d9d9d9; font-size: 15px; text-align: center; padding: 3px 0; border-radius: 10px 10px 0 0; }
+.bloc div{ padding: 10px; height: 105px; }
+.bloc div p,.bloc div img{ float: left; }
+.bloc div p{ margin: 0 0 0 25px; }
+.bloc div a{ text-align: right; display: block; text-decoration: underline; font-size: 13px; margin: 10px 13px 0 0; color: #3fc9fa; font-weight: bold; }
+
+
+#bas{
+background: #3fc9fa;
+height: 33px;
+text-align: center;
+}
+#bas a{
+color: #fff;
+font-size: 13px;
+line-height: 35px;
+}
+#bas a:hover{
+color: #f583e3;
+}
