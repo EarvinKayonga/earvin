@@ -64,24 +64,10 @@
 
     };
 
-
-
-
-
-
   // Main, Execution && Initialisation
 
   console.log("%c Hello, %s", css.css, 'I hope u enjoyed');
   console.log('%c Feel free to go further, I also wrote down the tests I came across during some interviews ', css.intro);
-
-  /*
-  interview : [{
-    where : "",
-    what : "",
-    whyNot : ""
-  }]
-
-  */
 
   var interviews = [{
     where: 'Lucca.fr, October 8',
