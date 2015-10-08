@@ -1,11 +1,11 @@
 {
   "name": "go-getting-started",
-  "description": "Go Getting Started Example App",
+  "description": "Go/Angular WebApp",
   "keywords": [
-    "getting-started",
+    "Earvin Kayonga",
     "go",
-    "sample",
-    "example"
+    "Angular",
+    "Golang"
   ],
   "image": "heroku/go:1.5",
   "mount_dir": "src/github.com/heroku/go-getting-started",
