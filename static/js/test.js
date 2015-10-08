@@ -61,7 +61,6 @@
         console.error(args + " is not an Array, U DumbASS");
       }
 
-
     };
 
   // Main, Execution && Initialisation
