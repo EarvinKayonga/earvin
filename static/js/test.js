@@ -92,13 +92,17 @@
     what: ['QCM on JavaScript', 'Palindrome Reflexions (check on lengths)'],
     whyNot: 'Worked there with Freelance Status'
   }, {
-    where: 'Metidia for Vinoga.com, 6 august',
+    where: 'Metidia for Vinoga.com, August 6',
     what: 'JavaScript reflexions:  var v = *; for(var i = 0; i< 5;i++){ log(v) v += *;}',
     whyNot: 'Apprenticeship too expensive'
   }, {
-    where: 'Les Grappes, 5 august',
+    where: 'Les Grappes, August 5',
     what: 'QCM on PHP, FalconPHP, reflexions on Symfony2, Hack and HHVM',
     whyNot: 'No Answer'
+  }, {
+    where: 'Ajna for BucketMovie.com, April 5',
+    what: 'QCM on NPM Universe, (Angular,Node)JS + MongoDB = Mean',
+    whyNot: 'Worked there: 6month Internship'
   }];
 
 
