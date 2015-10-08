@@ -1,0 +1,29 @@
+{
+  "name": "static",
+  "version": "0.0.1",
+  "homepage": "https://github.com/EarvinKayonga/earvin",
+  "authors": [
+    "Earvin Kayonga <demoneartin@gmail.com>"
+  ],
+  "description": "Earvin Kayonga Angular Golang WebApp for Showcasing himslef",
+  "main": "index.html",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node",
+    "yui"
+  ],
+  "keywords": [
+    "Earvin",
+    "Kayonga",
+    "AngularJs",
+    "Golang"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "angular": "~1.4.7"
+  }
+}
