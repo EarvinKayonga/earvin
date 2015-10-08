@@ -10,7 +10,8 @@
     intro: 'background: #223; color: red; font-size: 19px;',
     title: 'background: #222; color: #bada55; font-size: 15px; font-weight:bold;',
     content: 'background: #223; color: #ffffff;',
-    consequence : 'background: black ; color: #0000FF;'
+    consequence : 'background: black ; color: #0000FF;',
+    bottom: 'color: white; background: white;'
   },
 
   title = function(args){
@@ -25,8 +26,13 @@
     console.log("                        %c What happened: " + args, css.consequence );
   },
 
+  blank = function(){
+    console.log("%c     ---  -------------------------------   --------------------------------       ----------------------    ------------------------------- " , css.bottom);
+  },
+
   InterviewsTeller = function(args){
 
+    blank();
 
     if ((Array.isArray(args)) || (args.constructor.toString().indexOf("Array") > -1)  ) {
 
@@ -48,7 +54,8 @@
       console.error(args + " is not an Array, U DumbASS");
     }
 
-  };
+    blank();
+};
 
 
 
