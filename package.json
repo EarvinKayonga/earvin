@@ -1,0 +1,31 @@
+{
+  "name": "earvin",
+  "version": "0.0.0",
+  "description": "Earvin en cours page",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EarvinKayonga/earvin.git"
+  },
+  "keywords": [
+    "nodeJs",
+    "and",
+    "static"
+  ],
+  "author": "earvin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EarvinKayonga/earvin/issues"
+  },
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "bower": "^1.6.3",
+    "express": "^4.13.3",
+    "fs": "0.0.2",
+    "nodemon": "^1.7.1",
+    "path": "^0.12.7"
+  }
+}
