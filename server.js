@@ -10,6 +10,10 @@
     
     app.use(express.static(__dirname + "/public"));
     app.use(favicon(__dirname + '/public/assets/favicon.ico'));
+
+    app.get('*', function(req, res){
+	res.send('TA RAce', 404);
+    });
     
     app.listen(port);
     console.log("Server running on " + port);
