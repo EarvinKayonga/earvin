@@ -12,7 +12,7 @@
   app.use(favicon(__dirname + '/public/assets/favicon.ico'));
 
   app.all('*', function(req, res) {
-    res.render('error');
+    res.render('error', {url: req.url});
   });
 
   app.listen(port);
