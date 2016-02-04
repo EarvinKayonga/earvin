@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  const express = require('express'),
+  var express = require('express'),
     app = express(),
     fs = require('fs'),
     favicon = require('serve-favicon'),
