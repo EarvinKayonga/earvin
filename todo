@@ -1,3 +1,0 @@
-Add following to /etc/init.d/rc.local
-
-/usr/bin/sudo -u {{user}} /usr/local/bin/forever start {{app path}}
