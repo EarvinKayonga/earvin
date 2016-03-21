@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-  - 2.0.0-p247
+- 2.1
 # whitelist
 branches:
   only:
@@ -8,5 +8,11 @@ branches:
 before_install:
   - gem update --system
   - gem --version
-install: gem install jekyll
-script: (cd earvin && jekyll build && ls _site)
+install: gem install jekyll html-proofer
+script: cd earvin && (jekyll build && htmlproofer ./_site)
+
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+
+sudo: false # route your build to the container-based infrastructure for a faster build
