@@ -18,5 +18,5 @@ ruby install gem
 Install Jekyll:
 ```
 gem update
-gem install jekyll
+gem install jekyll jekyll-sitemap jekyll-gist
 ```
