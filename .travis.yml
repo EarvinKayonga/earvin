@@ -1,4 +1,8 @@
 language: ruby
+matrix:
+  include:
+    - os: linux
+      dist: trusty
 rvm:
 - 2.1
 # whitelist
