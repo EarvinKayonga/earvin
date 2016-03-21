@@ -1,0 +1,12 @@
+language: ruby
+rvm:
+  - 2.0.0
+# whitelist
+branches:
+  only:
+    - master
+before_install:
+  - gem update --system
+  - gem --version
+install: gem install jekyll
+script: (cd earvin && jekyll build && ls _site)
