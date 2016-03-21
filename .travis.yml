@@ -12,8 +12,8 @@ branches:
 before_install:
   - gem update --system
   - gem --version
-install: gem install jekyll html-proofer
-script: cd earvin; ls && (jekyll build && htmlproofer ./_site)
+install: gem install jekyll html-proofer jekyll-sitemap jekyll-gist
+script: cd earvin; (jekyll build && htmlproofer ./_site)
 
 env:
   global:

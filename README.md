@@ -20,3 +20,8 @@ Install Jekyll:
 gem update
 gem install jekyll jekyll-sitemap jekyll-gist
 ```
+
+to Build the files
+```
+jekyll build [--watch]
+```
