@@ -13,7 +13,7 @@ before_install:
   - gem update --system
   - gem --version
 install: gem install jekyll html-proofer
-script: cd earvin && (jekyll build && htmlproofer ./_site)
+script: cd earvin; ls && (jekyll build && htmlproofer ./_site)
 
 env:
   global:
