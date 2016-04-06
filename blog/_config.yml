@@ -1,11 +1,11 @@
 # Site wide configuration
 
-title:
+title: Heads Up, By Earvin Kayonga
 description:
 logo: # 120x120 px default image used for Twitter summary card
 teaser: # 400x250 px default teaser image used in image archive grid
-locale: en
-url:
+locale: fr
+url: https://earvinkayonga.com
 
 # Jekyll configuration
 
@@ -37,15 +37,15 @@ titlecase: true
 
 # Site owner
 owner:
-  name:
-  email:
-  twitter:
+  name: Earvin Kayonga
+  email: earvin@earvinkyonga.com
+  twitter: twitter.com/EarvinKayonga
   google:
     ad-client:
     ad-slot:
   bio:
   avatar: bio-photo.jpg # 160x160 px image for author byline
-  disqus-shortname:
+  disqus-shortname: earvinkayonga
 
 
 exclude: ["lib", "config.rb", ".sass-cache", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "*.sublime-project", "*.sublime-workspace", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "node_modules", "Gruntfile.js", "package.json"]
