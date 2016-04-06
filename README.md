@@ -12,13 +12,20 @@ On linux based OS,
 ** Make sure to have the latest version of ruby-dev and gem:**
 ```
 sudo apt-get install ruby-dev
-ruby install gem
+gem update
+gem install bundler
 ```
 
 Install Jekyll:
 ```
 gem update
 gem install jekyll jekyll-sitemap jekyll-gist
+```
+
+or
+
+```
+bundler install
 ```
 
 to Build the files
