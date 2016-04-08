@@ -13,7 +13,7 @@ safe: true
 # edit here to achieve your personal greatness
 url: localhost:3000/
 baseurl: /
-title: Chris Turner
+title: Earvin Kayonga
 author: Earvin Kayonga
 description: Personal blog and resume
 avatar: photo.jpg
