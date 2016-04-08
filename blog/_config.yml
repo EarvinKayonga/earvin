@@ -11,20 +11,20 @@ safe: true
 
 
 # edit here to achieve your personal greatness
-url: http://username.github.io/
-baseurl: /sustain/
+url: localhost:3000/
+baseurl: /
 title: Chris Turner
-author: Chris Turner
+author: Earvin Kayonga
 description: Personal blog and resume
-avatar: profile.png
-email: yourname@email.com
-github: biomadeira/sustain # username
-twitter: username
-linkedin: username
-stackoverflow: username   #e.g: users/2735833/proton1h1
-#Comment out if you don't want disqus 
-disqus: username
-google_analytics: UA-69391421-1
+avatar: photo.jpg
+email: earvin@earvinkayonga.com
+github: earvinkayonga # username
+twitter: EarvinKayonga
+linkedin: earvinkayonga
+stackoverflow: users/4990466/papimartial
+#Comment out if you don't want disqus
+disqus: earvinkayonga
+google_analytics: UA-76175245-1
 
 
 # needed for travis-ci build
