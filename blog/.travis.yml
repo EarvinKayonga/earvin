@@ -10,9 +10,8 @@ script: jekyll build #&& htmlproof ./_site --disable-external --only-4xx --check
 # branch whitelist, only for GitHub Pages
 branches:
   only:
-  - gh-pages     # test the gh-pages branch
+  - jekyll     # test the gh-pages branch
 
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
-
