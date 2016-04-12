@@ -107,10 +107,10 @@ html, body {
     margin: 20px 0;
 }
 .container a {
-    color: #27A822;
+    color: #6b6b6b;
 }
 .container a:hover {
-    color: #267723;
+    color: #6b6b6b;
 }
 .img-responsive {
     display: block;
@@ -204,8 +204,4 @@ div.footer {
   z-index: -1;
   opacity: .8;
   overflow: hidden;
-}
-
-section#about{
-  color: white;
 }
