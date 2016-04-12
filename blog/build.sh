@@ -1,2 +1,2 @@
-#gem install pygments jekyll jekyll-paginate rdiscount # Dependecy of Sustain
+#gem install pygments.rb jekyll jekyll-paginate rdiscount # Dependecy of Sustain
 jekyll build;
