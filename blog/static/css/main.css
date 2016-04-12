@@ -92,6 +92,10 @@ html, body {
     section#about{
       color: black !important;
     }
+
+    section#about a{
+      color: black !important;
+    }
 }
 
 /* Custom page CSS
@@ -205,4 +209,16 @@ div.footer {
   z-index: -1;
   opacity: .8;
   overflow: hidden;
+}
+
+section#about{
+  color: white;
+}
+
+section#about a{
+  color: white;
+}
+
+.black-background{
+  background: black;
 }
