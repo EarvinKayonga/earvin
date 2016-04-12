@@ -89,6 +89,9 @@ html, body {
         color: #6b6b6b;
         background-color: #ffffff;
     }
+    section#about{
+      color: black !important;
+    }
 }
 
 /* Custom page CSS
