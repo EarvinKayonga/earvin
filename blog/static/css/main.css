@@ -108,6 +108,7 @@ html, body {
 }
 .container a {
     color: #6b6b6b;
+    font-weight: bolder;
 }
 .container a:hover {
     color: #6b6b6b;
