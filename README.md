@@ -16,19 +16,25 @@ gem update
 gem install bundler
 ```
 
-Install Jekyll:
-```
-gem update
-gem install jekyll jekyll-sitemap jekyll-gist
-```
 
-or
+
+Quick install
 
 ```
 bundler install
 ```
 
-to Build the files
+or Manually install Jekyll and its dependencies:
+
 ```
-jekyll build [--watch]
+gem update
+gem install jekyll jekyll-sitemap jekyll-gist
+```
+
+
+Build the static files
+
+```
+cd blog;
+jekyll build
 ```
