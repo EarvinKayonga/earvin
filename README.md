@@ -11,7 +11,7 @@ Status :
 On linux based OS,
 ** Make sure to have the latest version of ruby-dev and gem:**
 ```
-sudo apt-get install ruby-dev
+sudo apt-get install build-essential ruby-dev
 gem update
 gem install bundler
 ```
