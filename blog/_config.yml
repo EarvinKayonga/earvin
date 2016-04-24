@@ -15,7 +15,7 @@ url: localhost:3000/
 baseurl: /
 title: Earvin Kayonga
 author: Earvin Kayonga
-description: Personal Tech blog and resume
+description:  Tech blog and resume of someone who loves JavaScript, functional Programming and watching Rust and Golang.
 avatar: photo.jpg
 email: earvin@earvinkayonga.com
 resume: /vitae
