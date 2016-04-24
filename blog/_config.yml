@@ -15,9 +15,9 @@ url: localhost:3000/
 baseurl: /
 title: Earvin Kayonga
 author: Earvin Kayonga
-description:  This is Earvin Kayonga's blog with his resume and links to his activities on the Web.
+description:  This is Earvin Kayonga's blog with his resume and links to his activities on the Web as a Software engineer.
 avatar: photo.jpg
-email: earvin[at]earvinkayonga.com
+email: earvin@earvinkayonga.com
 resume: /vitae
 github: earvinkayonga # username
 twitter: EarvinKayonga
