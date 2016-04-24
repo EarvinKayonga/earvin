@@ -33,6 +33,6 @@ server {
         }
 
         location / {
-           autoindex on;
+           autoindex off;
         }
 }
