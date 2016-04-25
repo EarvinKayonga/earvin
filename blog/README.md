@@ -1,4 +1,3 @@
-
 # Sustain
 
 [![Build Status](https://secure.travis-ci.org/biomadeira/sustain.png?branch=gh-pages)](http://travis-ci.org/biomadeira/sustain)
@@ -35,7 +34,7 @@ Simply clone/fork this repository, and then run `jekyll serve` inside the direct
 Edit the site attributes in *_config.yml* and edit the various entries in *_includes/* and *_posts/*.
 
 
-## Issues and contributing 
+## Issues and contributing
 
 I have tested this install with Ruby v2.2.2p95 (Mac OS RVM) and Jekyll v3.0.0. If you run into any problems please log them on the [issue tracker](https://github.com/biomadeira/sustain/issues).
 
@@ -46,7 +45,7 @@ Feel free pull-request your patches and fixes.
 [Sumit Murari](https://github.com/murarisumit), November 2015
 
 
-## Thanks 
+## Thanks
 
 Profile picture from [pexels](https://www.pexels.com/photo/portrait-black-african-ethnicity-person-9494/).
 
