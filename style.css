@@ -1,0 +1,131 @@
+/*	BigVideo Styles 
+	You may need to adjust these styles to get this working right in your design. 
+*/
+#big-video-wrap{overflow:hidden;position:fixed;height:100%;width:100%;top:0;left:0;}
+#big-video-vid,#big-video-image{position:absolute;}
+#big-video-control-container{position:fixed;bottom:0;padding:10px;width:100%;background:rgba(0,0,0,.25);
+  -webkit-transition-duration:0.6s;-moz-transition-duration:0.6s;-ms-transition-duration:0.6s;-o-transition-duration:0.6s;transition-duration:0.6s;}
+#big-video-control{width:100%;height:16px;position:relative;}
+#big-video-control-middle{margin: 0 56px 0 24px;}
+#big-video-control-bar{width:100%;height:16px;position:relative;cursor:pointer;}
+#big-video-control-progress{position:absolute;top:7px;height:3px;width:0%;background:#fff;}
+#big-video-control-track{position:absolute;top:8px;height:1px;width:100%;background:#fff;}
+#big-video-control-bound-left{left:0;}
+#big-video-control-bound-right{right:-1px}
+#big-video-control-track .ui-slider-handle {opacity:0;}
+#big-video-control-playhead{left:30%;}
+#big-video-control-play{position:absolute;top:0;left:0;height:16px;width:16px;background-image:url('bigvideo.png');}
+#big-video-control-timer{position:absolute;top:1px;right:0;color:#fff;font-size:11px;}
+#big-video-control-playhead,#big-video-control-bound-left,#big-video-control-bound-right{position:absolute;top:0;height:16px;width:1px;background:#fff;}
+#big-video-control .ui-slider-handle{border-left:solid 1px #fff; width:16px;height:16px;position:absolute;top:-8px;}
+.transparent{-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter:alpha(opacity=0);-moz-opacity:0;-khtml-opacity:0;opacity:0;}
+#big-video-wrap .vjs-big-play-button{display:none !important;}
+
+
+body {
+	background: white;
+	color: #fff;
+}
+.wrapper {
+}
+.wrapper:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .2);
+	top: 0;
+	left: 0;
+}
+
+.container {
+	position: relative;
+	z-index: 1000;
+	margin: 50vh auto 0 auto;
+	display: block;
+	width: 960px;
+	text-align: center;
+  	transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
+  	-webkit-transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
+  	-moz-transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
+}
+.container img {
+	display: block;
+	margin: 0 auto;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+}
+.container h1 {
+	margin-top: 50px;
+	font-size: 36px;
+}
+.container strong {
+	font-weight: bold;
+}
+.container p {
+	font-size: 24px;
+	max-width: 600px;
+	margin: 30px auto;
+}
+.container a {
+	font-weight: bold;
+	color: #fff;
+	text-decoration: none;
+}
+.container a:hover {
+	text-decoration: underline;
+}
+.container ul.social-icons li {
+	display: inline-block;
+	margin-right: 30px;
+	font-size: 24px;
+	position: relative;
+	z-index: 100;
+}
+.container ul.social-icons li:last-child {
+	margin-right: 0px;
+}
+.container ul.social-icons li:hover {
+	cursor: pointer;
+}
+.container ul.social-icons li:after {
+	content: "";
+	width: 45px;
+	height: 45px;
+	position: absolute;
+	top: -7px;
+	left: -10px;
+	z-index: -1;
+	opacity: 0;
+	transform: scale(0.3);
+	-webkit-transform: scale(0.3);
+	-moz-transform: scale(0.3);
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+}	
+.container ul.social-icons li:first-child:after {
+	background: #000;
+}
+.container ul.social-icons li:nth-child(2):after {
+	background: #ea4c89;
+}
+.container ul.social-icons li:nth-child(3):after	{
+	background: #00aced;
+}
+.container ul.social-icons li:nth-child(4):after {
+	background: #007bb6;
+}
+.container ul.social-icons li:nth-child(5):after {
+	background: #e67e22;
+}
+.container ul.social-icons li:hover:after {
+	opacity: 1;
+	transform: scale(1);
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+}
+
+
