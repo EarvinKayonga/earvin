@@ -13,7 +13,7 @@ safe: true
 # edit here to achieve your personal greatness
 url: localhost:3000
 baseurl: /
-title: Earvin Kayonga's Tech Blog
+title: Earvin Kayonga's Blog
 author: Earvin Kayonga
 description:  This is Earvin Kayonga's Tech blog with his resume and links to his activities on the Web as a Software engineer.
 avatar: photo.jpg
