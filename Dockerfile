@@ -8,6 +8,8 @@ RUN apk add  --update \
     bash              \
     ruby              \
     ruby-dev          \
+    python            \
+    python-dev        \
     libffi-dev        \
     git               \
     build-base
@@ -46,6 +48,8 @@ RUN apk del
     ruby-dev          \
     libffi-dev        \
     git               \
+    python            \
+    python-dev        \
     build-base
 
 RUN rm -rf /var/cache/apk/*     \
