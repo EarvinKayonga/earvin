@@ -36,10 +36,13 @@ RUN gem update --no-rdoc --no-ri --system &&\
     format            --no-rdoc --no-ri  \
     rdiscount         --no-rdoc --no-ri
 
+
+RUN mkdir -p Blog
 RUN git clone https://github.com/EarvinKayonga/earvin.git earvin
 
 WORKDIR earvin/blog/
-RUN jekyll build --trace
+RUN jekyll build --trace  --destination ../../Blog
+
 
 RUN gem uninstall -aIx
 RUN apk del           \
