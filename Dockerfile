@@ -51,7 +51,6 @@ RUN rm -rf ../earvin ../vitae
 RUN ls -al
 
 RUN gem uninstall -aIx
-RUN apk cache clean
 RUN apk del           \
     bash              \
     ruby              \
