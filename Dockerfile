@@ -34,6 +34,4 @@ RUN gem update --no-rdoc --no-ri --system &&\
 RUN git clone https://github.com/EarvinKayonga/earvin.git earvin
 
 WORKDIR earvin/blog/
-
-RUN bundle install
 RUN jekyll build
