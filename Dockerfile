@@ -40,9 +40,14 @@ RUN gem update --no-rdoc --no-ri --system &&\
 RUN mkdir -p Blog
 RUN git clone https://github.com/EarvinKayonga/earvin.git earvin
 
-WORKDIR earvin/blog/
-RUN jekyll build --trace  --destination ../../Blog
+#WORKDIR earvin/blog/
+RUN jekyll build --trace  --source earvin/blog/ --destination Blog
 
+RUN git clone https://github.com/EarvinKayonga/vitae.git vitae
+RUN jekyll build --trace  --source vitae --destination Blog/vitae
+
+WORKDIR Blog
+RUN ls -al
 
 RUN gem uninstall -aIx
 RUN apk del           \
