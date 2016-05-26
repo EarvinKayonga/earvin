@@ -13,10 +13,11 @@ RUN apk add  --update \
     build-base
 
 RUN gem sources --add https://rubygems.org/
-RUN gem update --no-rdoc --no-ri --system
-RUN gem install       \
-    compass --no-ri --no-rdoc \
-    listen            \
+RUN gem update --no-rdoc --no-ri --system &&\
+    gem install                             \
+    compass --no-ri --no-rdoc               \
+    listen                                  \
+    bundler                                 \
     --pre sass-css-importer
 
 RUN rm -rf /var/cache/apk/*
