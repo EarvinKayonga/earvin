@@ -21,7 +21,7 @@ RUN gem update --no-rdoc --no-ri --system &&\
     --pre sass-css-importer
 
 RUN gem update --no-rdoc --no-ri --system &&\
-    gem install  pygments.rb:0.5.0  --no-rdoc --no-ri 
+    gem install  pygments.rb:0.5.0  --no-rdoc --no-ri
 
 RUN gem update --no-rdoc --no-ri --system &&\
     gem install                           \
@@ -36,7 +36,7 @@ RUN gem update --no-rdoc --no-ri --system &&\
 RUN git clone https://github.com/EarvinKayonga/earvin.git earvin
 
 WORKDIR earvin/blog/
-RUN jekyll build
+RUN jekyll build --trace
 
 RUN gem uninstall -aIx
 RUN apk del
@@ -47,4 +47,12 @@ RUN apk del
     git               \
     build-base
 
-RUN rm -rf /var/cache/apk/*
+RUN rm -rf /var/cache/apk/*     \
+RUN rm -rf /usr/local/lib/ruby  \
+    rm -rf /usr/lib/ruby        \
+    rm -f /usr/local/bin/ruby   \
+    rm -f /usr/bin/ruby         \
+    rm -f /usr/local/bin/irb    \
+    rm -f /usr/bin/irb          \
+    rm -f /usr/local/bin/gem    \
+    rm -f /usr/bin/gem
