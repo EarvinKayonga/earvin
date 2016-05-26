@@ -47,9 +47,11 @@ RUN git clone https://github.com/EarvinKayonga/vitae.git vitae
 RUN jekyll build --trace  --source vitae --destination Blog/vitae
 
 WORKDIR Blog
+RUN rm -rf ../earvin ../vitae
 RUN ls -al
 
 RUN gem uninstall -aIx
+RUN apk cache clean
 RUN apk del           \
     bash              \
     ruby              \
