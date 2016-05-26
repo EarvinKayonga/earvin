@@ -42,7 +42,7 @@ WORKDIR earvin/blog/
 RUN jekyll build --trace
 
 RUN gem uninstall -aIx
-RUN apk del
+RUN apk del           \
     bash              \
     ruby              \
     ruby-dev          \
