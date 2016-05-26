@@ -21,13 +21,13 @@ RUN gem install       \
 
 RUN rm -rf /var/cache/apk/*
 
-RUN gem install       \
+RUN gem install    --no-rdoc --no-ri   \
     jekyll            \
     html-proofer      \
     jekyll-sitemap    \
     jekyll-gist
 
-RUN git clone git@github.com:EarvinKayonga/earvin.git
+RUN git clone git@github.com:EarvinKayonga/earvin.git earvin
 
 WORKDIR earvin/blog/
 
