@@ -17,7 +17,7 @@ RUN gem update --no-rdoc --no-ri --system &&\
     gem install                             \
     compass --no-ri --no-rdoc               \
     listen                                  \
-    bundler                                 \
+    --pre bundler                           \
     --pre sass-css-importer
 
 RUN rm -rf /var/cache/apk/*
@@ -32,4 +32,5 @@ RUN git clone https://github.com/EarvinKayonga/earvin.git earvin
 
 WORKDIR earvin/blog/
 
-RUN bundle install && jekyll build
+RUN bundle install
+RUN jekyll build
