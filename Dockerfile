@@ -29,6 +29,7 @@ RUN gem update --no-rdoc --no-ri --system &&\
     jekyll-gist       --no-rdoc --no-ri   \
     pygments.rb       --no-rdoc --no-ri   \
     jekyll-paginate   --no-rdoc --no-ri   \
+    json              --no-rdoc --no-ri   \
     rdiscount         --no-rdoc --no-ri
 
 RUN git clone https://github.com/EarvinKayonga/earvin.git earvin
