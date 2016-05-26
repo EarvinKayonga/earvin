@@ -22,10 +22,10 @@ RUN gem install       \
 RUN rm -rf /var/cache/apk/*
 
 RUN gem update --no-rdoc --no-ri --system &&\
-    gem install    --no-rdoc --no-ri   \
-    jekyll            \
-    jekyll-sitemap    \
-    jekyll-gist
+    gem install                           \
+    jekyll            --no-rdoc --no-ri   \
+    jekyll-sitemap    --no-rdoc --no-ri   \
+    jekyll-gist       --no-rdoc --no-ri  
 
 RUN git clone git@github.com:EarvinKayonga/earvin.git earvin
 
