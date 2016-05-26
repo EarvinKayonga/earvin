@@ -21,6 +21,7 @@ RUN gem update --no-rdoc --no-ri --system &&\
     --pre sass-css-importer
 
 RUN gem update --no-rdoc --no-ri --system &&\
+    gem uninstall pygments.rb              \
     gem install  pygments.rb:0.5.0  --no-rdoc --no-ri
 
 RUN gem update --no-rdoc --no-ri --system &&\
