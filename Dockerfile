@@ -24,7 +24,6 @@ RUN rm -rf /var/cache/apk/*
 RUN gem update --no-rdoc --no-ri --system &&\
     gem install    --no-rdoc --no-ri   \
     jekyll            \
-    html-proofer      --no-rdoc --no-ri   \
     jekyll-sitemap    \
     jekyll-gist
 
