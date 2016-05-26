@@ -9,11 +9,6 @@ branches:
   only:
     - jekyll
 
-install:
-  - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-
-
 script:
  - docker build -t earvin/blog .
  - docker images -a
- - docker push earvin/blog
