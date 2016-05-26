@@ -20,8 +20,6 @@ RUN gem update --no-rdoc --no-ri --system &&\
     --pre bundler                           \
     --pre sass-css-importer
 
-RUN rm -rf /var/cache/apk/*
-
 RUN gem update --no-rdoc --no-ri --system &&\
     gem install                           \
     jekyll            --no-rdoc --no-ri   \
@@ -37,3 +35,14 @@ RUN git clone https://github.com/EarvinKayonga/earvin.git earvin
 
 WORKDIR earvin/blog/
 RUN jekyll build
+
+RUN gem uninstall -aIx
+RUN apk del
+    bash              \
+    ruby              \
+    ruby-dev          \
+    libffi-dev        \
+    git               \
+    build-base
+
+RUN rm -rf /var/cache/apk/*
