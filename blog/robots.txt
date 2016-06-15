@@ -1,2 +1,3 @@
 User-agent: *
-Disallow: /static
+Disallow:
+Sitemap: http://www.earvinkayonga.com/sitemap.xml
