@@ -98,6 +98,17 @@ html, body {
     }
 }
 
+@media (max-width: 1199px) {
+  section#about{
+    color: black !important;
+  }
+
+  section#about a{
+    color: black !important;
+  }
+}
+
+
 /* Custom page CSS
 -------------------------------------------------- */
 
