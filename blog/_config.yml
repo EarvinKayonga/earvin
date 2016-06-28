@@ -11,7 +11,7 @@ safe: true
 
 
 # edit here to achieve your personal greatness
-url: https://www.earvinkayonga.com
+url: localhost:3000
 baseurl: /
 title: Earvin Kayonga's Tech Blog
 author: Earvin Kayonga
