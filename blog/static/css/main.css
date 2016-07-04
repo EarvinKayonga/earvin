@@ -233,3 +233,7 @@ section#about a{
 .black-background{
   background: black;
 }
+
+.seo{
+  display: none;
+}
