@@ -72,3 +72,6 @@ RUN rm -rf /usr/local/lib/ruby  \
 
 RUN mv earvin/blog/* /usr/share/nginx/html
 RUN mv Resume/*       /usr/share/nginx/html
+
+WORKDIR /usr/share/nginx/html
+RUN     tree
