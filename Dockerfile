@@ -44,7 +44,7 @@ RUN git clone https://github.com/EarvinKayonga/earvin.git earvin
 RUN git clone https://github.com/EarvinKayonga/vitae.git vitae
 
 RUN jekyll build --trace  --source earvin/blog/ --destination Blog
-RUN jekyll build --trace  --source vitae --destination vitae
+RUN jekyll build --trace  --source vitae --destination Resume
 
 
 RUN ls -al
@@ -71,4 +71,4 @@ RUN rm -rf /usr/local/lib/ruby  \
     rm -f /usr/bin/gem
 
 RUN mv earvin/blog/* /usr/share/nginx/html
-RUN mv vitae/*       /usr/share/nginx/html 
+RUN mv Resume/*       /usr/share/nginx/html 
