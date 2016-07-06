@@ -1,0 +1,3 @@
+PORTS = -p 35729:35729 -p 4000:80
+ENV   = \
+	-e VERSION=latest

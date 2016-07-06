@@ -12,6 +12,7 @@ RUN apk add  --update \
     python-dev        \
     libffi-dev        \
     git               \
+    tree              \
     build-base
 
 RUN gem sources --add https://rubygems.org/
@@ -37,17 +38,15 @@ RUN gem update --no-rdoc --no-ri --system &&\
     rdiscount         --no-rdoc --no-ri
 
 
-RUN mkdir -p Blog
+
+
 RUN git clone https://github.com/EarvinKayonga/earvin.git earvin
-
-#WORKDIR earvin/blog/
-RUN jekyll build --trace  --source earvin/blog/ --destination Blog
-
 RUN git clone https://github.com/EarvinKayonga/vitae.git vitae
-RUN jekyll build --trace  --source vitae --destination Blog/vitae
 
-WORKDIR Blog
-RUN rm -rf ../earvin ../vitae
+RUN jekyll build --trace  --source earvin/blog/ --destination Blog
+RUN jekyll build --trace  --source vitae --destination vitae
+
+
 RUN ls -al
 
 RUN gem uninstall -aIx
@@ -70,3 +69,6 @@ RUN rm -rf /usr/local/lib/ruby  \
     rm -f /usr/bin/irb          \
     rm -f /usr/local/bin/gem    \
     rm -f /usr/bin/gem
+
+RUN mv earvin/blog/* /usr/share/nginx/html
+RUN mv vitae/*       /usr/share/nginx/html 

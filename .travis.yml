@@ -10,5 +10,4 @@ branches:
     - jekyll
 
 script:
- - docker build -t earvin/blog .
- - docker images -a
+ - make release
