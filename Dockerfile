@@ -71,4 +71,4 @@ RUN rm -rf /usr/local/lib/ruby  \
     rm -f /usr/bin/gem
 
 RUN mv earvin/blog/* /usr/share/nginx/html
-RUN mv Resume/*       /usr/share/nginx/html 
+RUN mv Resume/*       /usr/share/nginx/html
