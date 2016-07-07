@@ -22,7 +22,7 @@ before_install:
 
 
 script:
- - jekyll build --incremental --source earvin/blog/ --destination Blog
+ - jekyll build --incremental --source blog/ --destination Blog
  - make build start logs
 
 env:
