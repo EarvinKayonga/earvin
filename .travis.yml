@@ -21,7 +21,7 @@ before_install:
 
 
 script:
- - jekyll build --incremental
+ - cd blog; jekyll build --incremental
  - make build start logs
 
 env:
