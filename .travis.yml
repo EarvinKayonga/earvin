@@ -1,4 +1,5 @@
 sudo: required
+language: ruby
 services:
   - docker
 git:
@@ -9,5 +10,21 @@ branches:
   only:
     - jekyll
 
+before_install:
+ - sudo apt-get  -qq  update
+ - gem update                    --no-rdoc --no-ri
+ - gem install jekyll            --no-rdoc --no-ri
+ - gem install jekyll-sitemap    --no-rdoc --no-ri
+ - gem install jekyll-gist       --no-rdoc --no-ri
+ - gem install jekyll-paginate   --no-rdoc --no-ri
+ - gem install rdiscount         --no-rdoc --no-ri
+
+
 script:
- - make release
+ - jekyll build --incremental
+ - make build start logs
+
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+  - TIMEOUT=1000

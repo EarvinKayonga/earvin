@@ -41,13 +41,10 @@ RUN gem update --no-rdoc --no-ri --system &&\
 
 
 RUN git clone https://github.com/EarvinKayonga/earvin.git earvin
-RUN git clone https://github.com/EarvinKayonga/vitae.git vitae
+RUN git clone -b jekyll https://github.com/EarvinKayonga/vitae.git resume
 
 RUN jekyll build --trace  --source earvin/blog/ --destination Blog
-RUN jekyll build --trace  --source vitae --destination Resume
-
-
-RUN ls -al
+RUN jekyll build --trace  --source resume --destination vitae
 
 RUN gem uninstall -aIx
 RUN apk del           \
@@ -70,8 +67,8 @@ RUN rm -rf /usr/local/lib/ruby  \
     rm -f /usr/local/bin/gem    \
     rm -f /usr/bin/gem
 
-RUN mv earvin/blog/* /usr/share/nginx/html
-RUN mv Resume/*       /usr/share/nginx/html/vitae
+RUN mv    Blog/*        /usr/share/nginx/html
+RUN cp -r vitae       /usr/share/nginx/html/
 
 WORKDIR /usr/share/nginx/html
 RUN     tree
