@@ -18,6 +18,7 @@ before_install:
  - gem install jekyll-gist       --no-rdoc --no-ri
  - gem install jekyll-paginate   --no-rdoc --no-ri
  - gem install rdiscount         --no-rdoc --no-ri
+ - gem install  pygments.rb:0.5.0  compass --no-rdoc --no-ri
 
 
 script:

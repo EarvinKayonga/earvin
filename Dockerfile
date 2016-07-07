@@ -67,6 +67,9 @@ RUN rm -rf /usr/local/lib/ruby  \
     rm -f /usr/local/bin/gem    \
     rm -f /usr/bin/gem
 
+RUN rm -rf /earvin               \
+    rm -rf /resume
+
 RUN mv    Blog/*        /usr/share/nginx/html
 RUN cp -r vitae       /usr/share/nginx/html/
 
