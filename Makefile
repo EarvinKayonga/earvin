@@ -37,7 +37,7 @@ release: build
 	make push -e VERSION=$(VERSION)
 
 dev:
-	jekyll serve --watch
+	jekyll serve --watch --source=blog
 
 logs:
 	docker logs $(NAME)-$(INSTANCE)
