@@ -7,7 +7,7 @@ REPO = earvin
 NAME = earvin
 INSTANCE = default
 
-.PHONY: build push shell run start stop logs rm release dev
+.PHONY: build push shell run start stop logs rm release dev ssh
 
 deps:
 	gem update --no-ri --no-rdoc && gem install jekyll pygments.rb rdiscount rouge --no-ri --no-rdoc
@@ -42,5 +42,8 @@ dev:
 
 logs:
 	docker logs $(NAME)-$(INSTANCE)
+
+ssh:
+	docker exec -i -t $(NAME)-$(INSTANCE) /bin/bash
 
 default: build
