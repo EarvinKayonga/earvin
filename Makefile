@@ -37,6 +37,7 @@ release: build
 	make push -e VERSION=$(VERSION)
 
 dev:
+	rm -rf _site
 	jekyll serve --watch --source=blog --incremental
 
 logs:
