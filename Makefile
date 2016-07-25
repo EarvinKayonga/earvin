@@ -1,10 +1,10 @@
 include env_make
 
-NS = earvin/blog
+NS = earvin
 VERSION ?= latest
 
-REPO = earvin
-NAME = earvin
+REPO = blog
+NAME = blog
 INSTANCE = default
 
 .PHONY: build push shell run start stop logs rm release dev ssh
