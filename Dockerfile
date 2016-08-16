@@ -19,7 +19,6 @@ RUN gem sources --add https://rubygems.org/
 RUN gem update --no-rdoc --no-ri --system &&\
     gem install                             \
     compass --no-ri --no-rdoc               \
-    listen                                  \
     --pre bundler                           \
     --pre sass-css-importer
 
