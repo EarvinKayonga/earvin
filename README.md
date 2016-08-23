@@ -12,25 +12,15 @@ On linux based OS,
 ** Make sure to have the latest version of ruby-dev and gem:**
 ```
 sudo apt-get install build-essential ruby-dev
-gem update
-gem install bundler
+gem update --no-rdoc --no-ri --system
+gem install pygments.rb jekyll jekyll-paginate rdiscount # Dependency of Sustain
 ```
 
-
-
-Quick install
-
+See the result on port 3000
 ```
-bundler install
+cd blog;
+jekyll s --watch
 ```
-
-or Manually install Jekyll and its dependencies:
-
-```
-gem update
-gem install jekyll jekyll-sitemap jekyll-gist
-```
-
 
 Build the static files
 
