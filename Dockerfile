@@ -1,11 +1,17 @@
-FROM       nginx:1.11.0-alpine
+FROM       nginx:1.11.1-alpine
 MAINTAINER Earvin Kayonga <earvin@earvinkayonga.com>
 
 ENV LANG en_US.utf8
 
+RUN echo "ipv6" >> /etc/modules \
+    echo "http://dl-1.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories; \
+    echo "http://dl-2.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories; \
+    echo "http://dl-3.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories; \
+    echo "http://dl-4.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories; \
+    echo "http://dl-5.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories
+
 # Install ruby & ruby-dev
-RUN apk add  --update \
-    bash              \
+RUN apk add  --no-cache --update \
     ruby              \
     ruby-dev          \
     python            \
