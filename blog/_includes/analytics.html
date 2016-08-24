@@ -8,3 +8,42 @@
   ga('send', 'pageview');
 
 </script>
+
+{% if site.title %}
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://earvinkayonga.com/blog"
+  },
+  "headline": site.title,
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://earvinkayonga.com/static/img/photo.jpg",
+    "height": 190,
+    "width": 190
+  },
+  "datePublished": "2016-07-09T08:00:00+08:00",
+  "dateModified": "2016-07-24T09:20:00+08:00",
+  "author": {
+    "@type": "Person",
+    "name": "Earvin Kayonga"
+  },
+   "publisher": {
+    "@type": "Organization",
+    "name": "EarvinKayonga",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://earvinkayonga.com/static/img/photo.jpg",
+      "width": 190,
+      "height": 190
+    }
+  },
+  "description": site.description
+}
+</script>
+
+{% endif %}
