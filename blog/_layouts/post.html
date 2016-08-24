@@ -22,6 +22,7 @@ layout: layout
 			<div class="blogpost">
 			  {{ content }}
 			   <hr>
+				  <h6>By {{site.author}}</h6>
 			   <div class="related-posts">
 				   <h5>Related Posts</h5>
 				   {% for post in site.related_posts limit:3 %}
@@ -42,5 +43,6 @@ layout: layout
 			</div>
 		</div>
 	</div>
+
 	{% include disqus.html %}
 </div>
