@@ -35,5 +35,17 @@
   "description": "{{site.description}}"
 }
 </script>
-
+ {% else %}
+ <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "url": "http://earvinkayonga.com",
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "email": "contact@earvinkayonga.com",
+    "contactType": "customer service"
+  }]
+}
+</script>
 {% endif %}
