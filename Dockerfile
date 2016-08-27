@@ -1,4 +1,4 @@
-FROM       nginx:1.11.1-alpine
+FROM       nginx:1.11.13-alpine
 MAINTAINER Earvin Kayonga <earvin@earvinkayonga.com>
 
 ENV LANG en_US.utf8
