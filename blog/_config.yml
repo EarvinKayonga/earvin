@@ -14,6 +14,7 @@ gems:
 collections:
   notes:
     output: true
+    permalink: /notes/:title.html
 # edit here to achieve your personal greatness
 url: https://www.earvinkayonga.com #localhost:3000
 baseurl: /
