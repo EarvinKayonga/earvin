@@ -4,13 +4,16 @@ markdown: rdiscount
 rdiscount:
   extensions: [smart]
 permalink: /:title.html
-paginate: 5
+paginate: 10
 port: 3000
 #safe: true
 gems:
   - jekyll-gist
   - jekyll-paginate
 
+collections:
+  notes:
+    output: true
 # edit here to achieve your personal greatness
 url: https://www.earvinkayonga.com #localhost:3000
 baseurl: /

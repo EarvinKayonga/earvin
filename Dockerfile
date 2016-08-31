@@ -1,6 +1,6 @@
 FROM       nginx:1.11.3-alpine
 MAINTAINER Earvin Kayonga <earvin@earvinkayonga.com>
-
+ENV JEKYLL_ENV production
 ENV LANG en_US.utf8
 
 RUN echo "ipv6" >> /etc/modules \

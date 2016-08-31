@@ -1,0 +1,17 @@
+<section id="projects">
+    <div class="container">
+        <h3>Development Notes</h3>
+        <div class="panel panel-default">
+            {% for note in site.notes %}
+            <div class="panel-body">
+                <h5>
+                  <i class="fa fa-github"></i>&nbsp;&nbsp;
+                  <strong><a href="{{baseurl }}{{ note.url }}">{{ note.title}}</a></strong>
+                  {{ note.description }}
+                  <span class="date">{{ note.date | date: "%B %e, %Y" }}</span>
+                </h5>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
