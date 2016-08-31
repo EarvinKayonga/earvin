@@ -1,0 +1,41 @@
+---
+    layout: layout
+    title:  Development Notes
+---
+
+
+<section id="projects">
+    <div class="container">
+        <h3>Development Notes</h3>
+        <div class="panel panel-default">
+
+
+          {% for post in site.posts %}
+            <div class="row">
+               <div class="col-sm-4 col-md-4 col-lg-4">
+                 <h5 style="text-align: right;">
+                  {{ post.date | date: "%B %e, %Y" }}
+                 </h5>
+               </div>
+               <div class="col-sm-8 col-md-8 col-lg-8">
+                 <h5 style="text-align: left">
+                  <strong><a href="{{baseurl }}{{ post.url }}">{{ post.title }}</a></strong>
+                 </h5>
+               </div>
+            </div>
+            {% endfor %}
+
+            {% for post in site.notes %}
+            <div class="panel-body">
+                <h5>
+                  sasazsa
+                  <i class="fa fa-github"></i>&nbsp;&nbsp;
+                  <strong><a href="{{baseurl }}{{ post.url }}">{{ post.title}}</a></strong>
+                  {{ post.description }}
+                  <span class="date">{{ post.date | date: "%B %e, %Y" }}</span>
+                </h5>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
