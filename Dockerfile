@@ -19,6 +19,7 @@ RUN apk add  --no-cache --update \
     libffi-dev        \
     git               \
     tree              \
+    nodejs            \
     build-base
 
 RUN gem sources --add https://rubygems.org/
