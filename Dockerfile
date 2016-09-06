@@ -62,6 +62,7 @@ RUN apk del           \
     git               \
     python            \
     python-dev        \
+    nodejs            \
     build-base
 
 RUN rm -rf /var/cache/apk/*     \
@@ -72,7 +73,9 @@ RUN rm -rf /usr/local/lib/ruby  \
     rm -f /usr/local/bin/irb    \
     rm -f /usr/bin/irb          \
     rm -f /usr/local/bin/gem    \
-    rm -f /usr/bin/gem
+    rm -f /usr/bin/gem          \
+    rm -f /usr/bin/node         \
+    rm -f /lib/node_modules
 
 RUN rm -rf /earvin               \
     rm -rf /resume
