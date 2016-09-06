@@ -10,6 +10,10 @@ port: 3000
 gems:
   - jekyll-gist
   - jekyll-paginate
+  - jekyll-minifier
+
+jekyll-minifier:
+    exclude: 'atom.xml'
 
 collections:
   notes:

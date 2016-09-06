@@ -39,7 +39,8 @@ RUN gem update --no-rdoc --no-ri --system &&\
     jekyll-gist       --no-rdoc --no-ri   \
     jekyll-paginate   --no-rdoc --no-ri   \
     json              --no-rdoc --no-ri   \
-    format            --no-rdoc --no-ri  \
+    format            --no-rdoc --no-ri   \
+    jekyll-minifier   --no-rdoc --no-ri   \
     rdiscount         --no-rdoc --no-ri
 
 
