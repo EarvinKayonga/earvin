@@ -78,6 +78,10 @@ html, body {
     border-color: transparent;
 }
 
+  .hamburger {
+    display: none;
+  }
+
 @media (max-width: 767px) {
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
         color: #6b6b6b;
@@ -103,6 +107,7 @@ html, body {
       font-weight: bolder;
       padding: 15px 15px;
       line-height: 20px;
+      display: block;
     }
 
     .navbar-ul {
