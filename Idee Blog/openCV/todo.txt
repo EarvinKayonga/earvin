@@ -1,0 +1,7 @@
+Detect Lettres with openCv then Decode  then
+
+
+Pistes: 
+
+- K = E, puis https://fr.wikipedia.org/wiki/Fr%C3%A9quence_d%27apparition_des_lettres_en_fran%C3%A7ais
+- Dernier mot = Hired , then voir la distance N - H
