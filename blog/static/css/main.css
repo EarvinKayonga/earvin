@@ -96,6 +96,26 @@ html, body {
     section#about a{
       color: black !important;
     }
+
+    .hamburger {
+      float: right;
+      display: block;
+      font-weight: bolder;
+      padding: 15px 15px;
+      line-height: 20px;
+    }
+
+    .navbar-ul {
+        display: none;
+    }
+
+    .display {
+      display: block;
+    }
+
+    .hide {
+      display: none;
+    }
 }
 
 @media (max-width: 1199px) {

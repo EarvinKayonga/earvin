@@ -2,9 +2,12 @@
   <div class="container">
     <div class="navbar-header">
       <a class="navbar-brand" href="{{ site.baseurl }}"><i class="fa fa-home"></i></a>
+      <a  class="hamburger" href="#" onClick="toggledisplay('menu');"><i class="fa fa-bars" aria-hidden="true" ></i></a>
+      <div class="clear">
+      </div>
     </div>
     <div id="navbar">
-      <ul class="nav navbar-nav navbar-right">
+      <ul id="menu" class="nav navbar-nav navbar-right navbar-ul">
         <li><a href="{{ site.baseurl }}blog.html">BLOG</a></li>
         <!--<li><a href="{{ site.baseurl }}projects.html">PROJECTS</a></li>-->
         <li><a href="{{ site.baseurl }}notes.html">NOTES</a>
