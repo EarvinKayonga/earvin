@@ -1,4 +1,4 @@
-FROM       nginx:1.11.3-alpine
+FROM       nginx:1.11.4-alpine
 MAINTAINER Earvin Kayonga <earvin@earvinkayonga.com>
 ENV JEKYLL_ENV production
 ENV LANG en_US.utf8
