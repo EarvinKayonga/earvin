@@ -38,7 +38,7 @@ release: build
 
 dev:
 	rm -rf _site
-	jekyll serve --watch --source=blog --incremental
+	jekyll serve --watch --source=blog --incremental --profile
 
 logs:
 	docker logs $(NAME)-$(INSTANCE)

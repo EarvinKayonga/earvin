@@ -11,6 +11,8 @@ gems:
   - jekyll-gist
   - jekyll-paginate
   - jekyll-minifier
+  - jekyll-seo-tag
+  - jekyll-auto-image
 
 jekyll-minifier:
     exclude: 'atom.xml'
@@ -32,6 +34,7 @@ github: earvinkayonga # username
 twitter: EarvinKayonga
 linkedin: earvinkayonga
 stackoverflow: users/4990466/papimartial
+image: https://www.earvinkayonga.com/static/img/profile.png
 #Comment out if you don't want disqus
 #disqus: earvinkayonga
 google_analytics: UA-76175245-1

@@ -42,6 +42,8 @@ RUN gem update --no-rdoc --no-ri --system &&\
     json              --no-rdoc --no-ri   \
     format            --no-rdoc --no-ri   \
     jekyll-minifier   --no-rdoc --no-ri   \
+    jekyll-seo-tag    --no-rdoc --no-ri   \
+    jekyll-auto-image --no-rdoc --no-ri   \
     rdiscount         --no-rdoc --no-ri
 
 
@@ -50,8 +52,8 @@ RUN gem update --no-rdoc --no-ri --system &&\
 RUN git clone https://github.com/EarvinKayonga/earvin.git earvin
 RUN git clone -b jekyll https://github.com/EarvinKayonga/vitae.git resume
 
-RUN jekyll build --trace  --source earvin/blog/ --destination Blog
-RUN jekyll build --trace  --source resume --destination vitae
+RUN jekyll build --trace  --profile --source earvin/blog/ --destination Blog
+RUN jekyll build --trace  --profile --source resume --destination vitae
 
 RUN gem uninstall -aIx
 RUN apk del           \
