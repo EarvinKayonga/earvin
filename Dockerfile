@@ -43,7 +43,6 @@ RUN gem update --no-rdoc --no-ri --system &&\
     format            --no-rdoc --no-ri   \
     jekyll-minifier   --no-rdoc --no-ri   \
     jekyll-seo-tag    --no-rdoc --no-ri   \
-    jekyll-auto-image --no-rdoc --no-ri   \
     rdiscount         --no-rdoc --no-ri
 
 
