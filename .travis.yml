@@ -19,11 +19,13 @@ before_install:
  - gem install jekyll-paginate   --no-rdoc --no-ri
  - gem install rdiscount         --no-rdoc --no-ri
  - gem install  pygments.rb:0.5.0  compass --no-rdoc --no-ri
- - gem install jekyll-minifier   --no-rdoc --no-ri   \
+ - gem install jekyll-minifier    --no-rdoc --no-ri
+ - gem install jekyll-seo-tag     --no-rdoc --no-ri
+ - gem install jekyll-auto-image  --no-rdoc --no-ri
 
 
 script:
- - jekyll build --incremental --source blog/ --destination Blog
+ - jekyll build --profile --incremental --source blog/ --destination Blog
  - make build start logs
 
 env:
