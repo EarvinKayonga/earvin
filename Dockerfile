@@ -1,27 +1,33 @@
-FROM       nginx:1.11.4-alpine
+FROM       nginx:1.11.5-alpine
 MAINTAINER Earvin Kayonga <earvin@earvinkayonga.com>
 ENV JEKYLL_ENV production
 ENV LANG en_US.utf8
+
+# FUCKING equivalent to build-essential
+RUN apk add --update build-base
 
 RUN echo "ipv6" >> /etc/modules \
     echo "http://dl-1.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories; \
     echo "http://dl-2.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories; \
     echo "http://dl-3.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories; \
     echo "http://dl-4.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories; \
-    echo "http://dl-5.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories
+    echo "http://dl-5.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories; \
+    echo "http://dl-6.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories;
+
 
 # Install ruby & ruby-dev
-RUN apk add  --no-cache --update \
-    ruby              \
-    ruby-dev          \
-    python            \
-    python-dev        \
-    libffi-dev        \
-    git               \
-    tree              \
-    nodejs            \
-    build-base
+RUN apk add --no-cache  --update\
+    python-dev                  \
+    ruby-dev                    \
+    libffi-dev                  \
+    ruby                        \
+    python                      \
+    git                         \
+    tree                        \
+    nodejs
 
+
+# Install Ruby Gems
 RUN gem sources --add https://rubygems.org/
 RUN gem update --no-rdoc --no-ri --system &&\
     gem install                             \
