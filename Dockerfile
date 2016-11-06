@@ -17,10 +17,10 @@ RUN echo "ipv6" >> /etc/modules \
 
 # Install ruby & ruby-dev
 RUN apk add --no-cache  --update\
+    ruby-dev=2.3.1-r0 			    \
+    ruby=2.3.1-r0               \
+    libffi-dev=3.2.1-r2         \
     python-dev                  \
-    ruby-dev                    \
-    libffi-dev                  \
-    ruby                        \
     python                      \
     git                         \
     tree                        \
@@ -57,6 +57,10 @@ RUN gem update --no-rdoc --no-ri --system &&\
 RUN git clone https://github.com/EarvinKayonga/earvin.git earvin
 RUN git clone -b jekyll https://github.com/EarvinKayonga/vitae.git resume
 
+RUN gem cleanup --dryrun
+RUN gem uninstall addressable -aIx
+RUN gem install addressable:2.4.0 --no-rdoc --no-ri
+RUN gem install sawyer:0.7.0 --no-rdoc --no-ri
 RUN jekyll build --trace  --profile --source earvin/blog/ --destination Blog
 RUN jekyll build --trace  --profile --source resume --destination vitae
 

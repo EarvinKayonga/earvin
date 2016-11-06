@@ -13,6 +13,9 @@ branches:
 before_install:
  - sudo apt-get  -qq  update
  - gem update                    --no-rdoc --no-ri
+ - gem cleanup --dryrun
+ - gem uninstall addressable -aIx
+ - gem install addressable:2.4.0 --no-rdoc --no-ri
  - gem install jekyll            --no-rdoc --no-ri
  - gem install jekyll-sitemap    --no-rdoc --no-ri
  - gem install jekyll-gist       --no-rdoc --no-ri
