@@ -78,7 +78,7 @@ RUN apk del           \
 
 RUN rm -rf /var/cache/apk/*     \
 RUN rm -rf /usr/local/lib/ruby  \
-    rm -rf /usr/lib/ruby        \
+    rmdir -f /usr/lib/ruby      \
     rm -f /usr/local/bin/ruby   \
     rm -f /usr/bin/ruby         \
     rm -f /usr/local/bin/irb    \
