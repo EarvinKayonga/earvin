@@ -11,19 +11,21 @@ RUN echo "ipv6" >> /etc/modules \
     echo "http://dl-2.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories; \
     echo "http://dl-3.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories; \
     echo "http://dl-4.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories; \
-    echo "http://dl-5.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories; \
-    echo "http://dl-6.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories;
+    echo "http://dl-5.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories;
 
 
-# Install ruby & ruby-dev
 RUN apk add --no-cache  --update\
-    ruby-dev=2.3.1-r0 			    \
-    ruby=2.3.1-r0               \
-    libffi-dev=3.2.1-r2         \
+    ruby-dev  			            \
+    ruby                        \
+    libffi-dev                  \
     python-dev                  \
     python                      \
     git                         \
     tree                        \
+    zlib                        \
+    zlib-dev                    \
+    curl                        \
+    wget                        \
     nodejs
 
 
@@ -40,16 +42,8 @@ RUN gem update --no-rdoc --no-ri --system &&\
     gem install  pygments.rb:0.5.0  --no-rdoc --no-ri
 
 RUN gem update --no-rdoc --no-ri --system &&\
-    gem install                           \
-    jekyll            --no-rdoc --no-ri   \
-    jekyll-sitemap    --no-rdoc --no-ri   \
-    jekyll-gist       --no-rdoc --no-ri   \
-    jekyll-paginate   --no-rdoc --no-ri   \
-    json              --no-rdoc --no-ri   \
-    format            --no-rdoc --no-ri   \
-    jekyll-minifier   --no-rdoc --no-ri   \
-    jekyll-seo-tag    --no-rdoc --no-ri   \
-    rdiscount         --no-rdoc --no-ri
+    gem install io-console bundler
+                              \
 
 
 
