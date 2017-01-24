@@ -10,7 +10,7 @@ INSTANCE = default
 .PHONY: build push shell run start stop logs rm release dev ssh
 
 deps:
-	gem update --no-ri --no-rdoc && gem install jekyll pygments.rb rdiscount rouge --no-ri --no-rdoc
+	gem update --no-ri --no-rdoc && gem install bundler io-console && bundler install
 
 build:
 	docker build -t $(NS)/$(REPO):$(VERSION) .
