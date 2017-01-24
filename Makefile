@@ -39,8 +39,10 @@ release: build
 dev:
 	rm -rf _site
 	docker build -t $(NS)/$(REPO)-dev -f Dockerfile.dev .
-	docker run -d $(NS)/$(REPO)-dev -p "3000:3000" -v `pwd`:/usr/share/nginx/html/ 
+	docker run -d --label=jekyll -p "3000:3000" --name $(NAME)-dev  -v `pwd`:/usr/share/nginx/html/ $(NS)/$(REPO)-dev
 
+dev-down:
+	docker rm -f $(NAME)-dev
 
 logs:
 	docker logs $(NAME)-$(INSTANCE)

@@ -16,8 +16,8 @@ RUN echo "ipv6" >> /etc/modules \
 
 
 RUN apk add --no-cache  --update\
-    ruby-dev=2.3.1-r0   			  \
-    ruby=2.3.1-r0               \
+    ruby-dev             			  \
+    ruby                        \
     libffi-dev                  \
     python-dev                  \
     python                      \
@@ -46,5 +46,4 @@ VOLUME ["/usr/share/nginx/html/"]
 
 RUN gem cleanup --dryrun && bundler install
 
-ENTRYPOINT /usr/bin/jekyll
-CMD  ["serve", "--watch", "--source=blog", "--incremental", "--profile"]
+CMD  ["/usr/bin/jekyll", "serve", "--watch", "--host", "0.0.0.0", "--source=blog", "--incremental", "--profile"]
