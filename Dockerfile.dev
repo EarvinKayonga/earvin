@@ -1,0 +1,50 @@
+FROM       alpine:latest
+MAINTAINER Earvin Kayonga <earvin@earvinkayonga.com>
+ENV JEKYLL_ENV production
+ENV LANG en_US.utf8
+EXPOSE 3000
+
+# FUCKING equivalent to build-essential
+RUN apk add --update build-base
+
+RUN echo "ipv6" >> /etc/modules \
+    echo "http://dl-1.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories; \
+    echo "http://dl-2.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories; \
+    echo "http://dl-3.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories; \
+    echo "http://dl-4.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories; \
+    echo "http://dl-5.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories;
+
+
+RUN apk add --no-cache  --update\
+    ruby-dev=2.3.1-r0   			  \
+    ruby=2.3.1-r0               \
+    libffi-dev                  \
+    python-dev                  \
+    python                      \
+    git                         \
+    tree                        \
+    zlib                        \
+    zlib-dev                    \
+    curl                        \
+    wget                        \
+    nodejs
+
+
+# Install Ruby Gems
+RUN gem sources --add https://rubygems.org/
+RUN gem update --no-rdoc --no-ri --system &&\
+    gem install io-console --no-rdoc --no-ri \
+                --pre     bundler
+
+
+
+
+ADD .           /usr/share/nginx/html/
+WORKDIR   /usr/share/nginx/html/
+
+VOLUME ["/usr/share/nginx/html/"]
+
+RUN gem cleanup --dryrun && bundler install
+
+ENTRYPOINT /usr/bin/jekyll
+CMD  ["serve", "--watch", "--source=blog", "--incremental", "--profile"]

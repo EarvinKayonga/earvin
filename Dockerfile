@@ -1,10 +1,10 @@
-FROM       nginx:1.11.5-alpine
+FROM       nginx:1.11.8-alpine
 MAINTAINER Earvin Kayonga <earvin@earvinkayonga.com>
 ENV JEKYLL_ENV production
-ENV LANG en_US.utf8
+ENV LANG    en_US.utf8
 
 # FUCKING equivalent to build-essential
-RUN apk add --update build-base
+RUN apk add --update build-base openssh git tree
 
 RUN echo "ipv6" >> /etc/modules \
     echo "http://dl-1.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories; \
@@ -15,13 +15,11 @@ RUN echo "ipv6" >> /etc/modules \
 
 
 RUN apk add --no-cache  --update\
-    ruby-dev  			            \
-    ruby                        \
+    ruby-dev=2.3.1-r0   			  \
+    ruby=2.3.1-r0               \
     libffi-dev                  \
     python-dev                  \
     python                      \
-    git                         \
-    tree                        \
     zlib                        \
     zlib-dev                    \
     curl                        \
@@ -32,31 +30,16 @@ RUN apk add --no-cache  --update\
 # Install Ruby Gems
 RUN gem sources --add https://rubygems.org/
 RUN gem update --no-rdoc --no-ri --system &&\
-    gem install                             \
-    compass --no-ri --no-rdoc               \
-    --pre bundler                           \
-    --pre sass-css-importer
-
-RUN gem update --no-rdoc --no-ri --system &&\
-    gem uninstall pygments.rb             &&\
-    gem install  pygments.rb:0.5.0  --no-rdoc --no-ri
-
-RUN gem update --no-rdoc --no-ri --system &&\
-    gem install io-console bundler
-                              \
-
-
+    gem install io-console  --no-rdoc --no-ri  \
+                --pre bundler
 
 
 RUN git clone https://github.com/EarvinKayonga/earvin.git earvin
 RUN git clone -b jekyll https://github.com/EarvinKayonga/vitae.git resume
 
-RUN gem cleanup --dryrun
-RUN gem uninstall addressable -aIx
-RUN gem install addressable:2.4.0 --no-rdoc --no-ri
-RUN gem install sawyer:0.7.0 --no-rdoc --no-ri
-RUN jekyll build --trace  --profile --source earvin/blog/ --destination Blog
-RUN jekyll build --trace  --profile --source resume --destination vitae
+RUN gem cleanup --dryrun && bundler install --clean --gemfile earvin/Gemfile
+RUN jekyll build --trace  --profile  --incremental --source earvin/blog/ --destination Blog
+RUN jekyll build --trace  --profile  --incremental --source resume --destination vitae
 
 RUN gem uninstall -aIx
 RUN apk del           \
@@ -72,7 +55,6 @@ RUN apk del           \
 
 RUN rm -rf /var/cache/apk/*     \
 RUN rm -rf /usr/local/lib/ruby  \
-    #rm -rf /usr/lib/ruby      	\
     rm -f /usr/local/bin/ruby   \
     rm -f /usr/bin/ruby         \
     rm -f /usr/local/bin/irb    \

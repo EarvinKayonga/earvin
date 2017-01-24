@@ -38,7 +38,9 @@ release: build
 
 dev:
 	rm -rf _site
-	jekyll serve --watch --source=blog --incremental --profile
+	docker build -t $(NS)/$(REPO)-dev -f Dockerfile.dev .
+	docker run -d $(NS)/$(REPO)-dev -p "3000:3000" -v `pwd`:/usr/share/nginx/html/ 
+
 
 logs:
 	docker logs $(NAME)-$(INSTANCE)
