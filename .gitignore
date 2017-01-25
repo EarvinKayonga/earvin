@@ -50,7 +50,7 @@ flycheck_*.el
 .projectile
 
 ### OSX ###
-.DS_Store
+*.DS_Store
 .AppleDouble
 .LSOverride
 
