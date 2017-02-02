@@ -70,6 +70,18 @@ var interval = setInterval(function () {
     clearInterval(interval);
     document.getElementsByClassName("panel")[0].className = "";
     document.getElementsByClassName("container")[0].style.maxWidth = 'none'
+    var pre = document.getElementsByTagName('pre');
+    for (var i = 0; i < pre.length; i++) {
+      pre[i].style.padding = 'none';
+      pre[i].style.margin = 'none';
+      pre[i].style.fontSize = '13px';
+      pre[i].style.lineHeight = '13px';
+      pre[i].style.borderRadius = '0px';
+      pre[i].style.border = 'none';
+      pre[i].style.wordBreak = 'none';
+      pre[i].style.wordWrap = 'none';
+      pre[i].style.backgroundColor = 'transparent';
+    }
   }
 }, 50);
 

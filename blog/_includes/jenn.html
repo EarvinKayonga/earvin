@@ -14,17 +14,110 @@
 </jenn>
 <script src="{{ site.baseurl }}static/js/jersey.js" defer></script>
 
+
  <div id="jenn">
    <header>
-
+    <h3> I miss C/C++ but not too much though</h3>
    </header>
-   <section>
-     
+
+  2016 was the year Deep Learning and Algorithm Training rose.
+
+  After a year of Scala and JavaScript, I started missing C (when everything is function, struct or primitives: Simple).
+
+  I Fell on a picture on a hiring website LINKED Fucking in, one day and said to myself,
+  why not try OCR that shit. Tesseract is a C++ library for OCR, also an excuse to go back to the C/C++
+  style of life.
+
+
+<section>
+  <div style="text-align: left;">
+
+    #include <tesseract/baseapi.h>
+    #include <leptonica/allheaders.h>
+
+    int main()
+    {
+      char *outText;
+
+      //setting up Tesseract
+      tesseract::TessBaseAPI *api = new tesseract::TessBaseAPI();
+      if (api->Init(NULL, "fra")) {
+            fprintf(stderr, "Could not initialize tesseract.\n");
+            exit(1);
+      }
+
+      // giving an Image to Tesseract
+      Pix *image = pixRead("/code/ressources/hired.png");
+      api->SetImage(image);
+
+      // result
+      outText = api->GetUTF8Text();
+
+      api->End();
+      delete [] outText;
+      pixDestroy(&image);
+
+      return (0);
+    }
+  </div>
+</section>
+
+code:
+
+   ```
+     git clone https://github.com/EarvinKayonga/Hired.git  code;
+     cd code
+     make; ./meatGrinder;
+   ```
+
+
+   output:
+
+   ```
+     OCR output: Rky skorrkaxky uvvuxzatozky bokttktz g buay yax Noxkj
+   ```
+
+
+Fuuuu, that was easy
+
+
+BUT...
+
+The shit smells like cesar (not to the salade recipe but an easy cipher to encode ascii-based tokens ), crypto 101.
+
+<header>
+ <h2>Caesar Cipher</h2>
+</header>
+
+<section>
+
+
+    - court explanation:
+     Shift Cipher:
+
+     bla bla
+     example:
+     poem à voir
+
+  </section>
+  <section>
+     - X
+       d <- distance to E
+
+       for all in string
+        - d
+
+frfr
    </section>
 
-   <section>
 
-   </section>
+
+
+
+   Translation:
+
+   `The best opportunities come to you on Hired?` ![]({{ site.baseurl }}static/img/dis.png =30x30)
+
 
    <footer>
       UI COMPLETLY STOLEN FROM [http://jerseyscript.github.io/](http://jerseyscript.github.io/) and [Jenn Schiffer](http://jennmoney.biz/)
