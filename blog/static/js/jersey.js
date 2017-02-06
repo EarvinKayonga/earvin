@@ -81,6 +81,7 @@ var interval = setInterval(function () {
       pre[i].style.wordBreak = 'none';
       pre[i].style.wordWrap = 'none';
       pre[i].style.backgroundColor = 'transparent';
+      pre[i].style.textAlign = "left";
     }
   }
 }, 50);
