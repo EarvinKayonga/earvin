@@ -107,14 +107,12 @@ That shit smells like cesar (not to the salade recipe but an basic cipher to enc
     <h3>How I finally crack the message</h3>
   </header>
   <section>
-     - X
-       d <- distance to E
+    
+    I look for the most used character: k
+    In French, the letter E is the most used letter
 
-       for all in string
-        - d
-
-    frfr
-
+    Here, the distance between |K - E| is the N (the initial shift during the encoding Process)
+    
    </section>
 
   
@@ -162,9 +160,12 @@ That shit smells like cesar (not to the salade recipe but an basic cipher to enc
    
    
    <section>
-    @index.js
-      "use strict";
 
+
+    @index.js
+
+
+      "use strict";
       const express = require("express"),
             multer = require('multer'),
             Tesseract = require('tesseract.js'),
