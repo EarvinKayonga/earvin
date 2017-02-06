@@ -1,8 +1,8 @@
 
 
 <jenn>
-  body { background: dodgerblue url({{ site.baseurl }}static/img/lycee.jpg); background-size: 100%; font-family: monospace; font-size: 1.3em; } <br />
-  a { color: #ffffff; animation-name: subtle; animation-duration: 94608000s; } <br />
+  body { background: url({{ site.baseurl }}static/img/lycee.jpg);  background-size: 100%; font-family: monospace; font-size: 1.3em; } <br />
+  a { color: white; animation-name: subtle; animation-duration: 94608000s; } <br />
   h1, h2 { margin: .2em 0; } <br />
   span { background: grey; } <br />
   h1 { font-family: monospace; font-size: 3em; } <br />
@@ -22,7 +22,7 @@
 
   2016 was the year Deep Learning and Algorithm Training rose. 
 
-  I once fell on a picture on a hiring website (LINKED Fucking in), one day and said to myself,
+  I once fell on this picture on a hiring website (LINKED Fucking in), one day and said to myself,
   why not try some OCR on that shit. [Tesseract](https://github.com/tesseract-ocr/tesseract/wiki/APIExample) is a C++ library for OCR, also was my excuse for going back to the C/C++
   style of life.
 
@@ -49,7 +49,7 @@
       api->SetImage(image);
 
       // result
-      outText = api->GetUTF8Text();ÒÒ
+      outText = api->GetUTF8Text();
 
       api->End();
       delete [] outText;
@@ -60,12 +60,17 @@
   </div>
 </section>
 
+
 code:
 
+
    ```
+     
+     # (Tesseract needs to be installed)
+     
      g++ main.cpp -W -Wall -Werror -llept -ltesseract -o meatGrinder 
-     # (Tesseract need to be installed)
      ./meatGrinder;
+
    ```
 
 
@@ -93,7 +98,7 @@ That shit smells like cesar (not to the salade recipe but an basic cipher to enc
     
 
     For example:
-     if N = 5, 'JavaScript' will give 'OfafXhwnuy' after encoding
+     if N = 5, 'JavaScript' will give 'OfafXhwnuy' after the encoding
 
   </section>
 
@@ -109,15 +114,20 @@ That shit smells like cesar (not to the salade recipe but an basic cipher to enc
         - d
 
     frfr
+
    </section>
 
   
   code:
-
+    
+   
    ```
-     git clone https://github.com/EarvinKayonga/Hired.git  code; # (Tesseract need to be installed)
+
+     git clone https://github.com/EarvinKayonga/Hired.git  code; 
+     # (Tesseract needs to be installed)
      cd code
      make; ./meatGrinder;
+   
    ```
 
  
@@ -152,7 +162,7 @@ That shit smells like cesar (not to the salade recipe but an basic cipher to enc
    
    
    <section>
-    @package.json
+    @index.js
       "use strict";
 
       const express = require("express"),
@@ -238,6 +248,6 @@ That shit smells like cesar (not to the salade recipe but an basic cipher to enc
    </footer>
 
    <style>
-   		@keyframes subtle { from { color: #ffffff; } to { color: #000000; } }
+   		@keyframes subtle { from { color: #ffffff; } to { color: red; } }
    </style>
  </div>
