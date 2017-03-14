@@ -6,7 +6,6 @@ pipeline:
     commands:
       - jekyll build --profile --incremental
 
-
 guide:
   name: Jekyll and Drone
   desc: >
