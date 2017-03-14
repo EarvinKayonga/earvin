@@ -4,7 +4,7 @@ pipeline:
     environment:
       - JEKYLL_ENV=production
     commands:
-      - jekyll build --profile --incremental
+      - jekyll build --profile --incremental --source=blog
 
 guide:
   name: Jekyll and Drone
