@@ -1,0 +1,16 @@
+pipeline:
+  build:
+    image: earvin:jekyllbuilder
+    environment:
+      - JEKYLL_ENV=production
+    commands:
+      - jekyll build --profile --incremental
+
+
+guide:
+  name: Jekyll and Drone
+  desc: >
+    Example project to build Jekyll WebSite with Drone
+  labels:
+    - Jekyll
+    - Ruby
