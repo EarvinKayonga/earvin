@@ -1,6 +1,6 @@
 pipeline:
   build:
-    image: earvin:jekyllbuilder
+    image: earvin/jekyllbuilder:latest
     environment:
       - JEKYLL_ENV=production
     commands:
