@@ -12,7 +12,7 @@ U need Ruby installed on your machine.
 
 From there
 ```
-gem install bundler
+gem install --pre bundler
 bundler install
 ```
 
