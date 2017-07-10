@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+
+    stages {
+        stage("Fetching ..") {
+            steps {
+                  // first repository
+                checkout([$class: 'GitSCM', branches: [[name: '*/jekyll']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'earvin']], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/EarvinKayonga/earvin.git']]])
+
+            }
+        }
+        stage('Build') {
+            steps {
+                sh "cd earvin && bundle install"
+                sh "cd earvin &&  JEKYLL_ENV=production bundle exec 'jekyll build --source=blog --incremental --profile' "
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh "rm -rf /va
+            }
+        }
+    }
+}
+
