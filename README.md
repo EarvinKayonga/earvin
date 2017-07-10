@@ -8,7 +8,7 @@ Status :
 
 ## Installation
 
-U need Ruby installed on your machine.
+U need Ruby, and Nodejs installed on your machine.
 
 From there
 ```
@@ -22,7 +22,7 @@ cd blog;
 jekyll s --watch
 ```
 
-Build the static files
+Build the static files 
 ```
 cd blog;
 jekyll build
