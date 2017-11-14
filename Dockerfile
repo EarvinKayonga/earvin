@@ -1,4 +1,4 @@
-FROM       nginx:1.11.8-alpine
+FROM       nginx:1.12.2-alpine
 MAINTAINER Earvin Kayonga <earvin@earvinkayonga.com>
 ENV JEKYLL_ENV production
 ENV LANG    en_US.utf8
@@ -15,8 +15,9 @@ RUN echo "ipv6" >> /etc/modules \
 
 
 RUN apk add --no-cache  --update\
-    ruby-dev=2.3.1-r0   			  \
-    ruby=2.3.1-r0               \
+    ruby-dev			\
+    ruby	                \
+    ruby-bundler		\
     libffi-dev                  \
     python-dev                  \
     python                      \
@@ -30,14 +31,12 @@ RUN apk add --no-cache  --update\
 # Install Ruby Gems
 RUN gem sources --add https://rubygems.org/
 RUN gem update --no-rdoc --no-ri --system &&\
-    gem install io-console  --no-rdoc --no-ri  \
-                --pre bundler
+    gem install io-console  --no-rdoc --no-ri  
 
-
-RUN git clone https://github.com/EarvinKayonga/earvin.git earvin
+ADD . earvin
 RUN git clone -b jekyll https://github.com/EarvinKayonga/vitae.git resume
 
-RUN gem cleanup --dryrun && bundler install --clean --gemfile earvin/Gemfile
+RUN gem cleanup --dryrun && bundle install --gemfile earvin/Gemfile
 RUN jekyll build --trace  --profile  --incremental --source earvin/blog/ --destination Blog
 RUN jekyll build --trace  --profile  --incremental --source resume --destination vitae
 
