@@ -33,8 +33,7 @@ RUN apk add --no-cache  --update\
 # Install Ruby Gems
 RUN gem sources --add https://rubygems.org/
 RUN gem update --no-rdoc --no-ri --system &&\
-    gem install io-console --no-rdoc --no-ri \
-                --pre     bundler
+    gem install io-console --no-rdoc --no-ri
 
 
 
@@ -44,6 +43,6 @@ WORKDIR   /usr/share/nginx/html/
 
 VOLUME ["/usr/share/nginx/html/"]
 
-RUN gem cleanup --dryrun && bundler install
+RUN gem cleanup --dryrun && bundle install
 
 CMD  ["/usr/bin/jekyll", "serve", "--watch", "--host", "0.0.0.0", "--source=blog", "--incremental", "--profile"]
