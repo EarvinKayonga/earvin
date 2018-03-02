@@ -14,9 +14,8 @@ before_install:
  - sudo apt-get  -qq  update
  - sudo apt-get install zlib1g-dev
  - gem update --no-rdoc --no-ri
- - gem cleanup --dryrun
  - gem install  --no-rdoc --no-ri bundler io-console
- - bundler install --clean
+ - bundle install
 
 
 script:
