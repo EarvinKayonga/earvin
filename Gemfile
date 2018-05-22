@@ -14,3 +14,5 @@ gem 'rdiscount'
 group :jekyll_plugins do
   gem 'jekyll_pages_api'
 end
+
+gem "webrick", "~> 1.4"

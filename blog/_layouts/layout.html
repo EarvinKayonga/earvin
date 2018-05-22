@@ -65,15 +65,11 @@
 	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}static/externe/font-awesome.min.css" />
   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}static/css/syntax.css" />
 
-    <!-- Google Analytics -->
-    {% include analytics.html %}
 
     {% seo %}
   </head>
   <!-- Main Body-->
   <body>
-    <h1 class="seo">Earvin Kayonga Rwogera EarvinKayonga, a Software Engineering Student</h1>
-    <h2 class="seo">Simple Blog </h2>
   <!-- Wrap all page content here -->
   <div id="wrap">
     <!-- Navbar header -->
@@ -88,8 +84,6 @@
     <script src="{{ site.baseurl }}static/externe/jquery.min.js" ></script>
     <!-- Bootstrap core JavaScript -->
     <script src="{{ site.baseurl }}static/externe/bootstrap.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-	  <script src="{{ site.baseurl }}static/js/docs.min.js"></script>
     <script src="{{ site.baseurl }}static/js/main.js" mal></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="{{ site.baseurl }}static/js/ie10-viewport-bug-workaround.js" async></script>
@@ -100,7 +94,20 @@
     /*
       typeit
      */
-			$('#typeit').typeIt();
+      new TypeIt('#typeit', {
+        speed: 90,
+        lifeLike: false
+      })
+      .type('wubba lubba ddub-ddub')
+      .pause(1000)
+      .empty()
+      .pause(1000)  
+      .type('uummmm')
+      .empty()
+      .pause(1000)
+      .type("I'm <strong>{{ site.author }}</strong>")
+      .pause(500)
+      .type(" <strong>:)</strong> ");
 		</script>
   {% include richcard.html %}
   </body>

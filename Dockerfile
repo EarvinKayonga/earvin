@@ -1,5 +1,4 @@
 FROM       alpine:latest as builder
-MAINTAINER Earvin Kayonga <earvin@earvinkayonga.com>
 ENV JEKYLL_ENV production
 ENV LANG    en_US.utf8
 
@@ -7,18 +6,27 @@ ENV LANG    en_US.utf8
 # FUCKING equivalent to build-essential
 RUN apk add --update build-base openssh git tree
 
+
+# FUCKING equivalent to build-essential
+RUN apk add --update build-base
+
 RUN echo "ipv6" >> /etc/modules \
+    echo "http://dl-1.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories; \
+    echo "http://dl-2.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories; \
+    echo "http://dl-3.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories; \
     echo "http://dl-4.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories; \
     echo "http://dl-5.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories;
 
-RUN apk add --upgrade apk-tools
 
 RUN apk add --no-cache  --update\
-    ruby-dev=2.5.0-r0   			  \
-    ruby=2.5.0-r0               \
+    ruby-webrick                \
+    ruby-etc                    \
+    ruby-dev                    \
     libffi-dev                  \
     python-dev                  \
     python                      \
+    git                         \
+    tree                        \
     zlib                        \
     zlib-dev                    \
     curl                        \
@@ -30,7 +38,9 @@ RUN apk add --no-cache  --update\
 RUN gem sources --add https://rubygems.org/
 RUN gem update --no-rdoc --no-ri --system &&\
     gem install io-console --no-rdoc --no-ri\
-    bigdecimal
+    sinatra                --no-rdoc --no-ri\
+    json                   --no-rdoc --no-ri\
+    bigdecimal                              
 
 RUN git clone https://github.com/EarvinKayonga/earvin.git earvin
 RUN git clone -b jekyll https://github.com/EarvinKayonga/vitae.git resume
@@ -59,4 +69,5 @@ WORKDIR /usr/share/nginx/html
 RUN     tree
 
 FROM       nginx:1.13-alpine
+EXPOSE      3000
 COPY --from=builder /build /usr/share/nginx/html

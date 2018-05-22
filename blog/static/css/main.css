@@ -20,6 +20,10 @@ html, body {
     /*padding: 0 0 60px;*/
 }
 
+.img-circle{
+    border-radius: 50%;
+}
+
 /* Navbar
 -------------------------------------------------- */
 
@@ -72,6 +76,10 @@ html, body {
     color: #6b6b6b;
 }
 
+#menu li {
+   margin: 2px;
+}
+
 .custom-nav{
     color: transparent !important;
     background: transparent;
@@ -121,6 +129,10 @@ html, body {
     .hide {
       display: none;
     }
+
+    #menu li {
+        float: right;
+    }
 }
 
 @media (max-width: 1199px) {
@@ -131,6 +143,12 @@ html, body {
   section#about a{
     color: black !important;
   }
+
+  .hamburger{
+    position: absolute;
+    right: 2px;
+    top: 2px;
+  }
 }
 
 
@@ -138,7 +156,7 @@ html, body {
 -------------------------------------------------- */
 
 .container {
-    width: auto;
+    width: 100%;
     max-width: 800px;
     text-align: center;
 }
@@ -262,3 +280,4 @@ section#about a{
 .seo{
   display: none;
 }
+

@@ -1,5 +1,5 @@
 FROM       alpine:latest
-MAINTAINER Earvin Kayonga <earvin@earvinkayonga.com>
+
 ENV JEKYLL_ENV production
 ENV LANG en_US.utf8
 EXPOSE 3000
@@ -16,8 +16,9 @@ RUN echo "ipv6" >> /etc/modules \
 
 
 RUN apk add --no-cache  --update\
-    ruby-dev             			  \
-    ruby                        \
+    ruby-webrick                \
+    ruby-etc                    \
+    ruby-dev                    \
     libffi-dev                  \
     python-dev                  \
     python                      \
@@ -34,7 +35,11 @@ RUN apk add --no-cache  --update\
 RUN gem sources --add https://rubygems.org/
 RUN gem update --no-rdoc --no-ri --system &&\
     gem install io-console --no-rdoc --no-ri\
-    bigdecimal
+    sinatra                --no-rdoc --no-ri\
+    json                   --no-rdoc --no-ri\
+    bigdecimal                              
+              
+
 
 
 
